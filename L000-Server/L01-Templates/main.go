@@ -1,9 +1,10 @@
 package main
 
 import (
-	"text/template"
+	"fmt"
 	"log"
 	"os"
+	"text/template"
 )
 
 func main() {
@@ -11,6 +12,7 @@ func main() {
 	if err != nil {
 		log.Fatalln("File not found")
 	}
+	fmt.Fprint("Hello")
 	err = tmp.Execute(os.Stdout, nil)
 	if err != nil {
 		log.Fatalln("ERROR to execute template")
